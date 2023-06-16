@@ -120,7 +120,7 @@ filtered_input = arranged_tensors[:, :, columns_to_keep]
 #[ 335,1592,10]
 
 padded_input=torch.nn.utils.rnn.pad_sequence(filtered_input, batch_first=True)
-# [335,1592,19]
+# [335,1592,10]
 
 
 packed_input=torch.nn.utils.rnn.pack_padded_sequence(filtered_input, batch_first=True).float()
