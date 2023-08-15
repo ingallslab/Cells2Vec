@@ -33,6 +33,7 @@ We had `100` parameter sets and `10` simulations for each set.
  - `trainer.py` file: Code for model training
  - `visualize.py` file: Code for generating KMeans+PCA and TSNE Plots.
  - `main.py` file: Wrapper file for an end to end run.
+ - `sim2data.py` file: Reads raw simulations into torch tensors. For `n` iterations (directories) of `k` simulations, groups the first file from all directories together, then the second ...`k`
 
 ### Results and Visualization
 
