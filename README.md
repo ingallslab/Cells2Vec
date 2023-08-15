@@ -41,33 +41,27 @@ We had `100` parameter sets and `10` simulations for each set.
 
 ## Usage
 
-### Training using default hyperparemeters
+### Training using default hyperparemeters (Save your dataset as dataset.pt in the Data directory)
 
-To train a model on the Mallat dataset from the UCR archive:
+To train a model using default hyperparameters and to evaluate:
 
-`python3 ucr.py --dataset Mallat --path path/to/Mallat/folder/ --save_path /path/to/save/models --hyper default_hyperparameters.json [--cuda --gpu 0]`
+`python3 main.py --config configs/configs.yaml --selected_config default`
 
-Adding the `--load` option allows to load a model from the specified save path.
-Training on the UEA archive with `uea.py` is done in a similar way.
 
 ### Further Documentation
 
-See the code documentation for more details. `ucr.py`, `uea.py`,
-`transfer_ucr.py`, `combine_ucr.py` and `combine_uea.py` can be called with the
+See the code documentation for more details. `main.py` can be called with the
 `-h` option for additional help.
 
 ### Hyperparameters
 
-Hyperparameters are described in Section S2.2 of the paper.
+Hyperparameters for the Encoder can be found [here](https://github.com/White-Link/UnsupervisedScalableRepresentationLearningTimeSeries/tree/master).
 
-For the UCR and UEA hyperparameters, two values were switched by mistake.
-One should read, as reflected in [the example configuration file](default_hyperparameters.json):
-> - number of output channels of the causal network (before max pooling): 160;
-> - dimension of the representations: 320.
->
-instead of
-> - number of output channels of the causal network (before max pooling): 320;
-> - dimension of the representations: 160.
+Hyperparameters for training:
+ - `num_samples`: Total size of training dataset. Random triplets will be sampled to output the training dataset;
+ - `num_val` : Number of classes to exclude from the training process (To test model's ability to generalize);
+ - `split_idx`: (See `data_utils.py`) Splits the training set into a training and validation (early stopping condition) sets.
+
 
 ## Pretrained Models
 
