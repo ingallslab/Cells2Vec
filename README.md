@@ -60,9 +60,10 @@ Hyperparameters for the Encoder can be found [here](https://github.com/White-Lin
 Hyperparameters for training:
  - `num_samples`: Total size of training dataset. Random triplets will be sampled to output the training dataset;
  - `num_val` : Number of classes to exclude from the training process (To test model's ability to generalize);
+ - `val_indices`: Manually select classes to exclude from training (Random if not specified).
  - `split_idx`: (See `data_utils.py`) Splits the training set into a training and validation (early stopping condition) sets.
 
 
 ## Pretrained Models
 
-Pretrained models are downloadable at [https://data.lip6.fr/usrlts/](https://data.lip6.fr/usrlts/).
+Coming soon
