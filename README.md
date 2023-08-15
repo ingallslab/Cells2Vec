@@ -38,7 +38,7 @@ Our dataset is available for download [here](https://drive.google.com/file/d/1Wn
 
 ### Results and Visualization
 
- - `checkpoints` directory: Plots and CSV results of regression will be generated here.
+ - `checkpoints` directory: Plots and CSV results of regression will be generated here, along with the model checkpoint(s).
  - `runs` directory: Tensorboard logs saved here
 
 ## Usage
