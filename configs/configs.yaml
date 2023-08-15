@@ -1,0 +1,28 @@
+# Example config.yaml
+
+## Run the main.py file using below configs as python main.py --config configs/configs.yaml --config_name default [Replace default with some other name if you want to run with different configs]
+## Uncomment val_indices if you want to feed the model with specific validation indices (for reproducibility/comparision, this is the way to go)
+configurations:
+
+  - name: default
+    data_path: './data/dataset.pt'
+    num_samples: 10000
+    num_val: 4
+    #val_indices: [4,9,16,25]
+    num_epochs: 30
+    learning_rate: 0.001
+    tb_log_dir: './runs'
+    checkpoint_dir: './checkpoints'
+    train: true
+    evaluate: true
+    loss_function: 'triplet'
+    checkpoint_path: './checkpoints'
+    use_cnn: true
+    in_channels: 10
+    channels: 10
+    depth: 5
+    reduced_size: 200
+    out_channels: 4
+
+
+  
