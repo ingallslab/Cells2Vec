@@ -9,7 +9,7 @@ Experiments were done with the following package versions for Python 3.10:
  - Matplotlib (`matplotlib`) v3.5.3;
  
  - Pandas (`pandas`) v2.0.1;
- - `cellmodeller-ingallslab` vx.x.x( To read raw simulations into torch);
+ - CellModeller (`cellmodeller-ingallslab`) vx.x.x( To read raw simulations into torch);
  - PyTorch (`torch`) v1.13.0 with CUDA 11.0;
  - Scikit-learn (`sklearn`) v1.3.0;
  - XGBoost (`xgboost`) v1.7.5.
