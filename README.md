@@ -14,7 +14,15 @@ Experiments were done with the following package versions for Python 3.10:
  - Scikit-learn (`sklearn`) v1.3.0;
  - XGBoost (`xgboost`) v1.7.5.
 
-This code should execute correctly with updated versions of these packages. Use the `requirments.txt` file to install these, except the `cellmodeller-ingallslab` package.
+This code should execute correctly with updated versions of these packages. Use the `requirments.txt` file to install these, except the `cellmodeller-ingallslab` package. \
+
+Below is one of many ways to setup a Virtual environment: After cloning the repo, using a terminal session
+`mkdir env` \
+ `cd env`\
+ `virtualenv .` \
+   `cd ..` \
+`source env/bin/activate` \
+ `pip install -r requirements.txt` 
 
 ## Datasets
 
