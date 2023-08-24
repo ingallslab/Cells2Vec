@@ -10,6 +10,7 @@ from trainer import *
 from visualize import *
 import yaml
 from eval import *
+import time
 
 """ 
 This block of code is useful to get live outputs if you use a SLURM scheduler/Compute Cluster 
@@ -136,11 +137,12 @@ def main(args):
         print(f"Layers: {args.depth}\n")
         print(f"Reduced size: {args.reduced_size}\n")
         print("############# TRAINING PARAMETERS #############\n")
+       
 
+        timestamp = time.strftime('%X:%x').replace('/', ':')
+        tb_log_dir = f'{args.tb_log_dir}/{model_type}_{args.num_samples}_{args.out_channels}_{args.loss_function}_{timestamp}'
 
-        tb_log_dir = f'{args.tb_log_dir}/{model_type}_{args.num_samples}_{args.out_channels}_{args.loss_function}'
-
-        checkpoint_dir = f'{args.checkpoint_dir}/{model_type}_{args.num_samples}_{args.out_channels}_{args.loss_function}'
+        checkpoint_dir = f'{args.checkpoint_dir}/{model_type}_{args.num_samples}_{args.out_channels}_{args.loss_function}_{timestamp}'
 
         _, _, checkpoint_pathway = train_model(args,train_loader, val_loader, model, criterion, optimizer, args.num_epochs, device, tb_log_dir, checkpoint_dir, config_todo)
       
