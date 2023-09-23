@@ -7,16 +7,16 @@ This is the code corresponding to the experiments conducted for the work "Cells2
 Experiments were done with the following package versions for Python 3.10:
  - Numpy (`numpy`) v1.21.5;
  - Matplotlib (`matplotlib`) v3.5.3;
- 
+
  - Pandas (`pandas`) v2.0.1;
  - CellModeller (`cellmodeller-ingallslab`) vx.x.x( To read raw simulations into torch);
  - PyTorch (`torch`) v1.13.0 with CUDA 11.0;
  - Scikit-learn (`sklearn`) v1.3.0;
  - XGBoost (`xgboost`) v1.7.5.
 
-This code should execute correctly with updated versions of these packages. Use the `requirments.txt` file to install these, except the `cellmodeller-ingallslab` package. 
+This code should execute correctly with updated versions of these packages. Use the `requirments.txt` file to install these, except the `cellmodeller-ingallslab` package.
 
-Below is one of many ways to setup a Virtual environment: After cloning the repo, using a terminal session 
+Below is one of many ways to setup a Virtual environment: After cloning the repo, using a terminal session
 
 
 `mkdir env` \
@@ -24,7 +24,7 @@ Below is one of many ways to setup a Virtual environment: After cloning the repo
  `virtualenv .` \
    `cd ..` \
 `source env/bin/activate` \
- `pip install -r requirements.txt` 
+ `pip install -r requirements.txt`
 
 ## Datasets
 
@@ -45,6 +45,8 @@ Our dataset is available for download [here](https://drive.google.com/file/d/1Wn
  - `visualize.py` file: Code for generating KMeans+PCA and TSNE Plots.
  - `main.py` file: Wrapper file for an end to end run.
  - `sim2data.py` file: Reads raw simulations into torch tensors. For `n` iterations (directories) of `k` simulations, groups the first file from all directories together, then the second ...`k`
+ - `regression_analysis.ipynb` notebook: Contains code for Pearson correlation tests, analysis of Residuals and plots for the expected vs observed parameters.
+ - `sims_vs_exps.ipynb` notebook: Example code to compute Similarity values to compare `experiment embeddings` and corresponding `simulation embeddings`.
 
 ### Results and Visualization
 
@@ -74,8 +76,5 @@ Hyperparameters for training:
  - `num_val` : Number of classes to exclude from the training process (To test model's ability to generalize);
  - `val_indices`: Manually select classes to exclude from training (Random if not specified).
  - `split_idx`: (See `data_utils.py`) Splits the training set into a training and validation (early stopping condition) sets.
-
-
-## Pretrained Models
 
 Coming soon
