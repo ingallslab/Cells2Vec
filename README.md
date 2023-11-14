@@ -1,6 +1,6 @@
 # Cells2Vec: Bridging The Gap Between Simulations And Experiments Using Causal Representation Learning -- Code
 
-This is the code corresponding to the experiments conducted for the work "Cells2Vec" where we used Causal Representation Learning to learn useful representations from high dimensional simulations and used Experiments to validate these representations, as well as estimate input parameters using Regression.
+This is the code corresponding to the experiments conducted for the work "Cells2Vec: Bridging the gap between experiments and simulations using causal representation learning" where we used Causal Representation Learning to learn useful representations from high dimensional simulations and used Experiments to validate these representations, as well as estimate input parameters using Regression.
 
 ## Requirements
 
@@ -77,4 +77,15 @@ Hyperparameters for training:
  - `val_indices`: Manually select classes to exclude from training (Random if not specified).
  - `split_idx`: (See `data_utils.py`) Splits the training set into a training and validation (early stopping condition) sets.
 
-Coming soon
+### Citation
+Please consider citing our work using the following bibtex entry,
+```bibtex
+@inproceedings{
+cells2vec,
+title={Cells2Vec: Bridging the gap between experiments and simulations using causal representation learning},
+author={{Dhruva, Rajwade, and Ahmadi, Atiyeh, and Ingalls, Brian},
+booktitle={Causal Representation Learning Workshop at NeurIPS 2023},
+year={2023},
+url={https://openreview.net/forum?id=O9jfSs82XU}
+}
+```
